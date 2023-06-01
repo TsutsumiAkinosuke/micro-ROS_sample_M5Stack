@@ -56,6 +56,8 @@ void setup() {
 
   // M5Stackのセットアップ
   M5.begin();
+
+  // 画面の明るさを最大にして白色に塗りつぶす
   M5.Lcd.setBrightness(255);
   M5.Lcd.fillScreen(WHITE);
 
@@ -69,7 +71,7 @@ void setup() {
 
   // micro-ROSをセットアップする関数
   // Wi-FI経由で通信する際の引数はSSID, パスワード, 接続先のPCのIPアドレス, ポート番号(適当でOK)
-  set_microros_wifi_transports("Welfare_Information_Lab_2.4GHz", "KMMT-KSN-KMMT-CMPS-CNTRL-5BLD@2F", "192.168.11.50", 8888);
+  set_microros_wifi_transports("SSID", "PASSWORD", "IP ADDRESS", 8888);
 
   // USB経由で通信する場合
   //set_microros_transports();
